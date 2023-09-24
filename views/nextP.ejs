@@ -1,0 +1,127 @@
+
+<%- include("allLinks.ejs"); %>
+
+<body>
+
+    <% resp %>
+
+        <section>
+
+            <% if(resp === 404) { %>
+                <h1>Please Enter Valid or Correct Spelling</h1>
+                <a href="/" style="font-size: 1.5rem;">Go Back to Home</a>
+            <% }else{ %>
+            
+            <div class="row" id="main">
+                <div class="col-lg-4 col-sm-12 div1">
+                    <form class="formData" action="/next" method="post">
+                        <input type="text" placeholder="" id="cityNameNxtP" name="cityNameP2">
+                        <button class="searchBtn">
+                            <i class="fa-solid fa-magnifying-glass fa-xl">
+
+                            </i></button>
+                    </form>
+
+                    <div id="div1Detail">
+                        <div style="text-align: center;">
+                            <i style="display: inline; " class="fa-sharp fa-solid fa-location-dot fa-lg"></i>
+                            <h4 style="display: inline; " class="cityVal">
+                                <%= location %>,<%= countryCode %>
+                            </h4>
+                        </div>
+                        <div>
+                            <img class="img" src="<%=src%>" style="width: 200px; height: 200px;" srcset="">
+                            <p style="text-align: center;">
+                                <%=clouds%>
+                            </p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h3 class="tempC" style="display: inline;">
+                                <%= temp %><span>&#8451; </span>
+                            </h3>
+                            <span><i class="fa-solid fa-grip-lines-vertical fa-2xl"></i></span>
+                            <h3 style="display: inline;">
+                                <%= tempF %> &#8457;
+                            </h3>
+                        </div>
+
+                        <p class="feelsLike" style="color: gray; text-align: center;">Feel's like <%= tFeels %>
+                        </p>
+
+                        <hr>
+                        <div class="footer">
+                            <h6>Made with <i class="fa-sharp fa-regular fa-heart fa-lg" style="color: #f51414;"></i> by
+                                Harsh!</h6>
+                            <p style="color: rgb(37, 36, 36); text-align: center;">
+                                <%= todayDate %>,<%= todayTime %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-sm-12 div2" id="details">
+                    <div class="row" id="beforeBasic">
+                        <div class="col col-lg-5 col-sm-8" id="basic">
+                            <p>Humidity</p>
+                            <div class="contImg">
+                                <img class="someIcons"
+                                    src="https://media.istockphoto.com/id/1277328164/vector/humidity-icon.jpg?s=612x612&w=0&k=20&c=na3bVWCUFazxveitRMDgxJUi-mr1LOUG1NBzq_XDFw4="
+                                    alt="">
+                                <h4 class="Val">
+                                    <%= humidity %>%
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col col-lg-5 col-sm-8" id="basic">
+                            <p>Pressure</p>
+                            <div class="contImg">
+                                <img class="someIcons" src="https://cdn-icons-png.flaticon.com/512/1839/1839341.png"
+                                    alt="">
+                                <h4 class="Val">
+                                    <%= pressure %>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" id="beforeBasic">
+                        <div class="col col-lg-5 col-sm-8" id="basic">
+                            <p>Temperature</p>
+                            <div class="contImg">
+                                <img class="MaxTemp"
+                                    src="data:image/jpeg;base64,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">
+                                <div class="temp">
+                                    <p class="tempVal">Max: <%= tempMinimum %>
+                                    </p>
+                                    <p class="tempVal">Min: <%= tempMinimum %>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col col-lg-5 col-sm-8" id="basic">
+                            <p>Wind</p>
+                            <div class="contImg">
+                                <img class="someIcons"
+                                    src="https://png.pngtree.com/png-clipart/20190925/original/pngtree-wind-icon-for-your-project-png-image_4892341.jpg"
+                                    alt="">
+
+                                <div class="temp">
+                                    <p class="tempVal">Speed: <%= windSpeed %>km/h</p>
+                                    <p class="tempVal">Deg: <%= windDegree %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <% } %>
+        </section>
+
+</body>
+
+</html>
