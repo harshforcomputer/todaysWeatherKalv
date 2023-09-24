@@ -6,7 +6,7 @@
     font-weight: bold;
 }
 
-section {
+.sectionOfNextP {
 
 
     width: auto;
@@ -59,6 +59,7 @@ section {
     top: 37%;
     text-align: center;
 }
+
 .frontSubHeading {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2.0rem;
@@ -91,7 +92,7 @@ section {
     color: black;
     width: 50%;
     padding: 9px;
-    margin: 15% 0 0 0;
+    margin: 15% 0;
 }
 
 #cityName::placeholder {
@@ -204,16 +205,11 @@ hr {
     }
 
     #cityName {
-        border: none;
-        border-bottom: 1px solid black;
-        outline: none;
-        background-color: transparent;
-        width: 60%;
+        width: 70%;
         margin: 15% 0 0 0;
     }
 
     #cityName::placeholder {
-        color: white;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     }
@@ -233,14 +229,29 @@ hr {
         padding: 1.5%;
     }
 
-    .div1{
+    .div1 {
         border-radius: unset;
         height: 700px;
     }
+
     .div2 {
         border-radius: unset;
         height: 1100px;
     }
+
+    .frontHeading {
+        font-size: 1.9rem;
+    }
+
+    .frontSubHeading {
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    .searchBtn {
+        padding: 9px 10px;
+    }
+
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
@@ -257,13 +268,18 @@ hr {
         justify-content: center;
     }
 
-    .div1{
+    .div1 {
         border-radius: unset;
         height: 700px;
     }
+
     .div2 {
         border-radius: unset;
         height: 1100px;
+    }
 
+
+    #cityName {
+        margin: 24% 0 0 0;
     }
 }
