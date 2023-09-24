@@ -44,7 +44,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(53, 53, 53, 0.75)),
         url("https://images.pexels.com/photos/268941/pexels-photo-268941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
-    opacity: 0.8;
+    opacity: 0.9;
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
